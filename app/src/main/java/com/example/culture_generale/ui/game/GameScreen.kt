@@ -173,7 +173,7 @@ fun GameScreen(
                     )
                 }
                 Text(
-                    text = "Niv. ${state.playerRating}",
+                    text = "Niv. ${state.displayedRating}",
                     style = MaterialTheme.typography.titleSmall,
                     color = MaterialTheme.colorScheme.secondary
                 )

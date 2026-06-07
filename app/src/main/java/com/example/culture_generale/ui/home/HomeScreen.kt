@@ -19,7 +19,8 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun HomeScreen(
     modifier: Modifier = Modifier,
-    onStartGame: () -> Unit
+    onStartAllCategories: () -> Unit,
+    onChooseCategory: () -> Unit
 ) {
     Column(
         modifier = modifier
@@ -47,12 +48,23 @@ fun HomeScreen(
         Spacer(Modifier.height(64.dp))
 
         Button(
-            onClick = onStartGame,
+            onClick = onStartAllCategories,
             modifier = Modifier
                 .fillMaxWidth()
                 .height(56.dp)
         ) {
-            Text("Jouer", style = MaterialTheme.typography.titleMedium)
+            Text("Toutes catégories confondues", style = MaterialTheme.typography.titleMedium)
+        }
+
+        Spacer(Modifier.height(12.dp))
+
+        Button(
+            onClick = onChooseCategory,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(56.dp)
+        ) {
+            Text("Choisir une catégorie", style = MaterialTheme.typography.titleMedium)
         }
     }
 }
